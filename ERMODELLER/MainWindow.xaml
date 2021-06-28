@@ -1,0 +1,93 @@
+﻿<Window x:Class="ERMODELLER.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:ERMODELLER"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="ER Designer" MinHeight="630" MinWidth="825">
+
+    <Grid x:Name="GridMain">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="400*" />
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0" Height="20" VerticalAlignment="Top" FontSize="19" Panel.ZIndex="1000">
+            <MenuItem Header="Файл" Height="20">
+                <MenuItem Header="Создать..." Click="MenuItem_Create_Click"></MenuItem>
+                <MenuItem Header="Открыть..."  Click="MenuItem_FileOpen_PreviewMouseUp"></MenuItem>
+                <MenuItem Header="Сохранить">
+                    <MenuItem Header="Сохранить PNG"  Click="MenuItem_Save_PreviewMouseUp"></MenuItem>
+                    <Separator></Separator>
+                    <MenuItem Header="Сохранить проект"  Click="MenuItem_CurentFileSave_Click"></MenuItem>
+                    <MenuItem Header="Сохранить проект как..."  Click="MenuItem_FileSave_PreviewMouseUp"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Скопировать скрипт" Click="MenuItem_ClipboardScript_PreviewMouseUp"></MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="Выход" Click="MenuItem_Exit_Click"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <ScrollViewer x:Name="MainScrollViewer"
+              CanContentScroll="False"
+              Grid.Column="0"
+              Grid.Row="1"
+              VerticalScrollBarVisibility="Auto"
+              HorizontalScrollBarVisibility="Auto">
+            <Canvas x:Name="CanvasMain" PreviewMouseLeftButtonDown="CanvasMain_PreviewMouseDown" PreviewMouseMove="CanvasMain_PreviewMouseMove"
+            PreviewMouseLeftButtonUp="CanvasMain_PreviewMouseUp" Background="{DynamicResource MaterialDesignPaper}"
+            local:ZoomBehavior.IsEnabled="True"
+            local:ZoomBehavior.ZoomFactor="0.1"
+            local:ZoomBehavior.ScrollViewer="{Binding ElementName=MainScrollViewer}">
+                <Canvas.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Добавить таблицу" PreviewMouseUp="ContextMenu_AddTable_PreviewMouseUp"></MenuItem>
+                    </ContextMenu>
+                </Canvas.ContextMenu>
+            </Canvas>
+        </ScrollViewer>
+        <Grid x:Name="OverlayCreateTable" Panel.ZIndex="1000" Visibility="Collapsed" Grid.RowSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.3*" />
+                <ColumnDefinition Width="800" />
+                <ColumnDefinition Width="1.3*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1.66*" />
+                <RowDefinition Height="600" />
+                <RowDefinition Height="1.66*" />
+            </Grid.RowDefinitions>
+            <Grid.Background>
+                <SolidColorBrush Color="Black" Opacity=".5" />
+            </Grid.Background>
+
+            <Frame x:Name="Frame_CreatePageLoader" Grid.Column="1" Grid.Row="1"></Frame>
+        </Grid>
+        <Grid x:Name="OverlayEditTable" Panel.ZIndex="1000"  Visibility="Collapsed" Grid.RowSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.3*" />
+                <ColumnDefinition Width="800" />
+                <ColumnDefinition Width="1.3*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1.66*" />
+                <RowDefinition Height="600" />
+                <RowDefinition Height="1.66*" />
+            </Grid.RowDefinitions>
+            <Grid.Background>
+                <SolidColorBrush Color="Black" Opacity=".5" />
+            </Grid.Background>
+
+            <Frame x:Name="Frame_EditPageLoader" Grid.Column="1" Grid.Row="1"></Frame>
+        </Grid>
+    </Grid>
+</Window>

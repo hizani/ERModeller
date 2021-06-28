@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ERMODELLER.EntryPoint">
+    <Position X="14.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>EntryPoint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ERMODELLER.MainWindow" BaseTypeListCollapsed="true">
+    <Position X="16.25" Y="6.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>BALhAIEIACAAAEIQBBAEAAAAQACCFCAIAEIAAgAACAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ERMODELLER.TablePageBase">
+    <Position X="7.5" Y="1" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAKAQllDAAAEAAAAQCAAAAAAABQAKhAAYYEAAIA=</HashCode>
+      <FileName>TablePageBase.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ERMODELLER.EditTablePage">
+    <Position X="10.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAACAAAAAAAAAAAAAAAAACAAAAQAAAAA=</HashCode>
+      <FileName>EditTablePage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ERMODELLER.CreateTablePage">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAgAAAAAAAAAAAAAAAAAAACAAAAQAAAAA=</HashCode>
+      <FileName>CreateTablePage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ERMODELLER.DbTable" BaseTypeListCollapsed="true">
+    <Position X="15.25" Y="1.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAACAAAAAAAAAACAAAgACEAAAAAA=</HashCode>
+      <FileName>DbTable.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ERMODELLER.DbTableItem">
+    <Position X="18.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAIAAAAQAAAIEAAAAARIACAAAAAA=</HashCode>
+      <FileName>DbTableItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ERMODELLER.ColumnAttributeName">
+    <Position X="13" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ColumnAttributeName.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ERMODELLER.SqlParser">
+    <Position X="12.5" Y="13" Width="2.75" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="ERMODELLER.SqlParser.ColumnName">
+        <TypeIdentifier>
+          <NewMemberFileName>SqlParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>EAgAAAAAACCAAAgAAAAAAAAAAAYAAQAAAAAAAQAAAAA=</HashCode>
+      <FileName>SqlParser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ERMODELLER.ZoomBehavior">
+    <Position X="9.25" Y="8.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>EAAAAEAAAAAAAAQEAAABAAAAAIAAAAUAQAAgBAIQAAI=</HashCode>
+      <FileName>ZoomBehavior.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ERMODELLER.DbTableModel">
+    <Position X="20.5" Y="1.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAEAAAAAAAAAEAQAAAAAAAAAAAAASAEYAA=</HashCode>
+      <FileName>DbTableModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

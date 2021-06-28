@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="ERMODELLER.DbTable"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:ERMODELLER"
+             mc:Ignorable="d">
+    <StackPanel x:Name="mainGrid">
+        <StackPanel.ContextMenu>
+            <ContextMenu>
+                <MenuItem Header="Изменить" PreviewMouseUp="MenuItem_EditTable_PreviewMouseUp"></MenuItem>
+                <MenuItem Header="Удалить" PreviewMouseUp="MenuItem_DeleteTable_PreviewMouseUp"></MenuItem>
+                <MenuItem Header="Скопировать скрпит" PreviewMouseUp="MenuItem_ClipboardCopy_PreviewMouseUp"></MenuItem>
+            </ContextMenu>
+        </StackPanel.ContextMenu>
+        <Border BorderThickness="0.5" BorderBrush="LightGray" Height="19">
+            <TextBlock TextAlignment="Center" x:Name="tbTableName" FontSize="16" Text="name" Margin="0,-1,0,0" Foreground="Black" />
+        </Border>
+        <DataGrid AutoGenerateColumns="False" IsReadOnly="True" x:Name="dgTable" Grid.Row="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding PK}" Header="PK" />
+                <DataGridTextColumn Binding="{Binding FK}" Header="FK" />
+                <DataGridTextColumn Width="125" Binding="{Binding Name}" Header="Наименование" />
+                <DataGridTextColumn Width="120" Binding="{Binding Type}" Header="Тип" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </StackPanel>
+</UserControl>
